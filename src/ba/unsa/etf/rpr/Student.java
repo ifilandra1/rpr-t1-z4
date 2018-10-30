@@ -1,3 +1,4 @@
+package ba.unsa.etf.rpr;
 
 public class Student {
 
@@ -7,7 +8,12 @@ public class Student {
 
     public Student ( String ime, String prezime, int brindexa ) {
 
-         this.ime=ime; this.prezime=prezime; this.brindexa=brindexa;
+        this.ime=ime; this.prezime=prezime; this.brindexa=brindexa;
+    }
+
+    public String toString () {
+
+        return ""+this.prezime+" "+this.ime+" ("+this.brindexa+")";
     }
 
     public String getPrezime() {

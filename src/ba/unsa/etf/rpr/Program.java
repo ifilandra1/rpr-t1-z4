@@ -1,9 +1,11 @@
+package ba.unsa.etf.rpr;
+
 import java.util.Scanner;
 
 public class Program {
 
-    public Student [] nizstudenata = new Student [10];
-    public Predmet [] nizpredmeta = new Predmet [10];
+    private Student [] nizstudenata = new Student [10];
+    private Predmet [] nizpredmeta = new Predmet [10];
     int brstudenata=0, brpredmeta=0;
 
 
@@ -16,6 +18,7 @@ public class Program {
     }
 
     public void main2 () {
+
 
         glavna: while(true) {
             System.out.println("Meni: “1. Kreiranje novog predmeta\n2. Kreiranje novog studenta\n 3. Upis studenta na predmet \n4.Ispis studenta" +
@@ -54,10 +57,10 @@ public class Program {
                 String prezime = scan.next();
                 System.out.println("Unesite naziv predmeta");
                 String predmet=scan.next();
-                 int i=0,j=0;
+                int i=0,j=0;
                 for( ; i!=10; i++) if(nizstudenata[i].getPrezime().equals(prezime)) break;
                 for(; j!=10; j++) if(nizpredmeta[j].getNaziv().equals(predmet))break;
-               nizpredmeta[j].upisi( nizstudenata[i]);
+                nizpredmeta[j].upisi( nizstudenata[i]);
 
             }
 
@@ -85,7 +88,7 @@ public class Program {
 
                 for(int k=i; k< brstudenata -1; k++) {
 
-                       nizstudenata[k]=nizstudenata[k+1];
+                    nizstudenata[k]=nizstudenata[k+1];
                 }
                 brstudenata=brstudenata-1;
 
@@ -113,7 +116,7 @@ public class Program {
                 String naziv=scan.next();
                 int i=0;
                 for(; i!=10; i++) if ( nizpredmeta[i].getNaziv().equals(naziv)) break;
-               nizpredmeta[i].ispisstudenata();
+                nizpredmeta[i].ispisstudenata();
 
 
             }
@@ -128,3 +131,5 @@ public class Program {
 
 
 }
+
+
